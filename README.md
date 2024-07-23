@@ -23,7 +23,7 @@ An Expense Tracker application designed to help you manage and visualize your pe
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/expense-tracker.git
+   git clone https://github.com/Ronitsabhaya75/Expense_Tracker.git
 
 ### How It Works
 
