@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Specifies the character encoding for the HTML document -->
+  <meta charset="UTF-8" />
+  <!-- Ensures the page is properly scaled on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title of the web page -->
+  <title>Expense Tracker</title>
+  <!-- Link to the external CSS file for styling -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main heading of the page -->
+  <h2>Expense Tracker</h2>
+  <!-- Main container for all content -->
+  <div class="main-container">
+    <!-- Sub-container for balance, income, and expense details -->
+    <div class="container">
+      <!-- Section for displaying user's current balance -->
+      <h4>Your Balance</h4>
+      <h1 id="balance">$0.00</h1>
+      <!-- Container for income and expense summary -->
+      <div class="inc-exp-container">
+        <div>
+          <!-- Income label and value -->
+          <h4>Income</h4>
+          <p id="money-plus" class="money-plus">+$0.00</p>
+        </div>
+        <div>
+          <!-- Expense label and value -->
+          <h4>Expense</h4>
+          <p id="money-minus" class="money-minus">-$0.00</p>
+        </div>
+      </div>
+      <!-- Section for transaction history -->
+      <h3>History</h3>
+      <ul id="list" class="list"></ul>
+      <!-- Section for adding a new transaction -->
+      <h3>Add New Transaction</h3>
+      <form id="form">
+        <!-- Input field for transaction description -->
+        <div class="form-control">
+          <label for="text">Text</label>
+          <input type="text" id="text" placeholder="Enter text..." />
+        </div>
+        <!-- Input field for transaction amount -->
+        <div class="form-control">
+          <label for="amount">Amount <br /></label>
+          <input type="number" id="amount" placeholder="Enter amount..." />
+        </div>
+        <!-- Button to add the transaction -->
+        <button class="btn">Add transaction</button>
+      </form>
+    </div>
+    <!-- Container for displaying the chart -->
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+  <!-- Script for including Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Link to the external JavaScript file for functionality -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* Root variables for consistent box-shadow usage */
+:root {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Universal box-sizing to include padding and border in element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Styling for the body element */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Modern font stack */
+}
+
+/* Styling for the main heading */
+h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Main container styling for layout */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Space between child elements */
+}
+
+/* Container for the expense tracker details */
+.container {
+    width: 300px; /* Fixed width for the container */
+}
+
+/* Styling for the balance heading */
+h1 {
+    letter-spacing: 1px; /* Space between letters */
+    margin: 0; /* Remove default margin */
+}
+
+/* Styling for section headings */
+h3 {
+    border-bottom: 1px solid #bbb; /* Bottom border for visual separation */
+    padding-bottom: 10px; /* Space below text */
+    margin: 20px 0 10px; /* Margins for spacing */
+}
+
+/* Styling for sub-headings */
+h4 {
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+/* Container for income and expense summary */
+.inc-exp-container {
+    background-color: #fff; /* White background */
+    box-shadow: var(--box-shadow); /* Apply box-shadow variable */
+    padding: 20px; /* Padding inside the container */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Margins for spacing */
+}
+
+/* Flex properties for child elements in the inc-exp-container */
+.inc-exp-container > div {
+    flex: 1; /* Flex-grow property to evenly distribute space */
+    text-align: center; /* Center-align text */
+}
+
+/* Border for separating income and expense sections */
+.inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede; /* Light gray border */
+}
+
+/* Styling for money values */
+.money {
+    font-size: 2em; /* Larger font size for visibility */
+    letter-spacing: 1px; /* Space between letters */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+/* Specific styling for income values */
+.money-plus {
+    color: #2ecc71; /* Green color */
+}
+
+/* Specific styling for expense values */
+.money-minus {
+    color: #c0392b; /* Red color */
+}
+
+/* Label styling */
+label {
+    display: inline-block; /* Inline-block for margin to work */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Styling for text and number input fields */
+input[type="text"],
+input[type="number"] {
+    border: 1px solid #dedede; /* Light gray border */
+    border-radius: 2px; /* Rounded corners */
+    display: block; /* Block display for full-width input */
+    font-size: 16px; /* Font size for readability */
+    padding: 10px; /* Padding inside input */
+    width: 100%; /* Full width of the container */
+}
+
+/* Styling for buttons */
+.btn {
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #9c88ff; /* Purple background */
+    box-shadow: var(--box-shadow); /* Apply box-shadow variable */
+    color: #fff; /* White text color */
+    border: 0; /* Remove default border */
+    display: block; /* Block display for full-width button */
+    font-size: 16px; /* Font size for readability */
+    margin: 10px 0 30px; /* Margins for spacing */
+    padding: 10px; /* Padding inside button */
+    width: 100%; /* Full width of the container */
+}
+
+/* Remove outline on focus for buttons and delete button */
+.btn:focus,
+.delete-btn:focus {
+    outline: 0; /* Remove default outline */
+}
+
+/* Styling for transaction history list */
+.list {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0; /* Remove default padding */
+    margin-bottom: 20px; /* Margin for spacing */
+}
+
+/* Styling for individual list items */
+.list li {
+    background-color: #fff; /* White background */
+    box-shadow: var(--box-shadow); /* Apply box-shadow variable */
+    color: #333; /* Dark gray text color */
+    display: flex;
+    justify-content: space-between; /* Space between content */
+    position: relative; /* Relative positioning for absolute elements */
+    padding: 10px; /* Padding inside list items */
+    margin: 10px 0; /* Margins for spacing */
+}
+
+/* Border for positive transaction items */
+.list li.plus {
+    border-right: 5px solid #2ecc71; /* Green border */
+}
+
+/* Border for negative transaction items */
+.list li.minus {
+    border-right: 5px solid #c0392b; /* Red border */
+}
+
+/* Styling for delete button */
+.delete-btn {
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #e74c3c; /* Red background */
+    border: 0; /* Remove default border */
+    color: #fff; /* White text color */
+    font-size: 20px; /* Larger font size */
+    line-height: 20px; /* Line height to match font size */
+    padding: 2px 5px; /* Padding inside button */
+    position: absolute; /* Absolute positioning for placement */
+    top: 50%; /* Center vertically */
+    left: 0; /* Align to left edge */
+    transform: translate(-100%, -50%); /* Position off-screen initially */
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Show delete button on hover */
+.list li:hover .delete-btn {
+    opacity: 1; /* Make visible on hover */
+}
+
+/* Styling for the chart container */
+.chart-container {
+    width: 600px; /* Fixed width for the chart */
+    height: 400px; /* Fixed height for the chart */
+}
